@@ -28,7 +28,7 @@ const UserSchema = new Schema({
     role: {
         type: String,
         enum: ['Intaker', 'Case_Manager', 'Clinical_Advisor', 'Project_Manager', 'F_Audit','Counselor'],
-        default: 'user',
+        default: 'Intaker',
         required: true,
     },
     avatar: { type: String },
