@@ -47,7 +47,7 @@ const sendEmail = (toEmail, order) => {
 };
 
 const sendForgotPasswordEmail  = (toEmail, token) => {
-  const resetUrl = `${process.env.APP_URL_TEST}/reset-password?${token}`;
+  const resetUrl = `${process.env.APP_URL_TEST}/reset-password?token=${token}`;
   const mailOptions = {
     to: toEmail,
     from: process.env.EMAIL_FROM || 'noreply@nintshop.com',
