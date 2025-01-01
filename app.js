@@ -7,6 +7,7 @@ const cors = require('cors');
 const connectDB = require('./config/config');
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
+var blogRoutes = require('./routes/blog');
 const jwt = require('jsonwebtoken');
 const dotenv = require('dotenv');
 dotenv.config();
@@ -27,6 +28,7 @@ app.use(cors());
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+app.use('/blogs', blogRoutes);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
